@@ -316,11 +316,6 @@ $color-orange:#f35d0d;
 
 .questions{
     @extend %container-padding;
-    
-    input{
-        height: 58px;border-radius: 8px;padding-left: 20px;box-sizing: border-box;background: #ececec;
-        &::placeholder{color:#333}
-    }
 
     .uk-text-muted>a{color:#999}
 }
@@ -403,3 +398,7 @@ h3,h4{
 
 // UiKit Replace
 .uk-lightbox{background:rgba(0, 0, 0, 0.9)}
+.uk-input{
+    height:58px;border-radius:8px;padding-left:20px;box-sizing:border-box;background:#ececec;
+    &::placeholder{color:#333}
+}
