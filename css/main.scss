@@ -147,10 +147,10 @@ $color-orange:#f35d0d;
     background:url('../img/backgrounds/projects.png') no-repeat right bottom;
 
     .listing{
-        width:370px;
-        @media(max-width:1279px){width:320px}
-        @media(max-width:959px){width:280px}
-        @media(max-width:759px) and (min-width:640px){width:240px}
+        width:320px;
+        @media(max-width:1279px){width:300px}
+        @media(max-width:959px){width:260px}
+        @media(max-width:759px) and (min-width:640px){width:220px}
         @media(max-width:639px){width:100%}
 
         .uk-list{
@@ -174,17 +174,25 @@ $color-orange:#f35d0d;
     }
 
     .uk-slider{
-        max-width:770px;
+        max-width:790px;
 
         .uk-slider-container{
             border:2px solid #ad8659;
+
+            .uk-cover-container{min-height:500px;display:block}
 
             img{width:100%}
         }
 
         .uk-visible\@s{
-            .uk-position-center-left{left:-30px}
-            .uk-position-center-right{right:-30px}
+            .uk-position-center-left{
+                left:-45px;
+                @media(max-width:959px){left:-35px}
+            }
+            .uk-position-center-right{
+                right:-45px;
+                @media(max-width:959px){right:-35px}
+            }
         }
 
         .uk-dotnav > li{
@@ -240,8 +248,15 @@ $color-orange:#f35d0d;
 .production{
     @extend %container-padding;
 
-    h3{margin:-15px auto 10px}
-    p{max-width:280px;margin:0 auto;font-size:20px}
+    h3{
+        margin:-15px auto 10px;
+        @media(max-width:639px){margin-bottom:3px}
+    }
+
+    p{
+        max-width:280px;margin:0 auto;font-size:20px;
+        @media(max-width:639px){font-size:16px}
+    }
 }
 
 .create{
@@ -263,9 +278,13 @@ $color-orange:#f35d0d;
         h3{
             margin:0;font-size:30px;
             @media(max-width:959px){font-size:24px;margin-top:5px}
+            @media(max-width:639px){font-size:20px}
         }
 
-        p{max-width:450px;font-size:18px;line-height:20px;margin:5px 0 0}
+        p{
+            max-width:450px;font-size:18px;line-height:20px;margin:5px 0 0;
+            @media(max-width:639px){font-size:16px}
+        }
     }
 
     span.video{
@@ -280,6 +299,7 @@ $color-orange:#f35d0d;
 
     .info{
         max-width:1140px;margin-top:55px;
+        @media(max-width:639px){margin-top:25px}
 
         img{float:left;margin:-35px 35px 25px 0}
 
@@ -333,6 +353,8 @@ footer{
         @media(max-width:439px){font-size:28px}
     }
 }
+
+#modal-policy{font-size:14px}
 
 // Headers
 h1,.uk-h1{
